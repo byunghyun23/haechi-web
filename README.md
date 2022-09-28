@@ -2,7 +2,7 @@
 
 Please see <a href='https://github.com/byunghyun23/haechi/'>here</a> for more details on the solution.   
 This repository is a Springboot web page for clients to use HAECHI.   
-Please do <a href='https://github.com/byunghyun23/haechi/'>this</a> first before starting Solidity code analysis.   
+Please do <a href='https://github.com/byunghyun23/haechi-server/'>this</a> first before starting Solidity code analysis.   
 
 ![image](https://github.com/byunghyun23/haechi-web/blob/master/haechi_web_home.PNG)   
 
