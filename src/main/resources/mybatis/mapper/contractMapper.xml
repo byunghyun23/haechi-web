@@ -8,17 +8,17 @@
         SELECT
         	COUNT(ID) AS contractCount
         FROM
-        	CONTRACTS
+        	contracts
     </select>
     
     <select id="selectMAX" resultType="com.web.haechi.vo.ContractCountVO">
         SELECT
         	MAX(ID) AS contractCount
         FROM
-        	CONTRACTS
+        	contracts
     </select>
     
     <insert id="insertContract" parameterType="hashMap"> 
-        INSERT INTO CONTRACTS VALUES (null, #{code}, #{ip}, null) 
+        INSERT INTO contracts VALUES (null, #{code}, #{ip}, null) 
     </insert>
 </mapper>

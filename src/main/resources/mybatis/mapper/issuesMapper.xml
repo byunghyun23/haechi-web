@@ -8,10 +8,10 @@
         SELECT 
         	COUNT(ID) AS issuesCount
         FROM 
-        	ISSUES
+        	issues
     </select>
     
     <insert id="insertIssue" parameterType="hashMap"> 
-        INSERT INTO ISSUES VALUES (null, #{contracId}, #{vulnerabilityId}, #{line}) 
+        INSERT INTO issues VALUES (null, #{contracId}, #{vulnerabilityId}, #{line}) 
     </insert>
 </mapper>
