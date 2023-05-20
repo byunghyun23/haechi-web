@@ -3,6 +3,17 @@
     margin: 0px;
 }
 
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+	/* font-family: "Malgun Gothic", MalgunGothic,Helvetica,Arial,sans-serif; */
+	font-family: 'NEXON Lv1 Gothic OTF' !important;
+}
+
 html {
     font-size: small;
 }
@@ -51,12 +62,12 @@ body {
 }
 #num_of_scan {
 	display: inline-block;
-	width: 30%;
+	width: 25%;
 	font-size: 2.5rem;
 }
 #num_of_issue {
 	display: inline-block;
-	width: 30%;
+	width: 25%;
 	font-size: 2.5rem;
 	color: rgb(255, 100, 100);
 }
@@ -90,17 +101,17 @@ body {
 	margin-top: 3%;
 }
 #scan {
-	letter-spacing: 5px;
+	letter-spacing: 2px;
 	font-weight: bold;
 	font-size: 1rem;
 	border-radius: 5px;
 	color: white;
 	float: right;
-	background-color: rgb(100, 255, 100);
+	background-color: #911818;
 	cursor: pointer;
 }
 #scan:hover {
-	background-color: rgb(20, 255, 20);
+	background-color: #ff0000;
 }
 .side > ul {
 	list-style: none;
