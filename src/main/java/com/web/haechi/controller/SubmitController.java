@@ -60,6 +60,7 @@ public class SubmitController {
 //		System.out.println("solidity code : " + solidity);
 		
 		String hostName = "localhost";
+
 		int port = 5757;
 		Socket socket = new Socket();
 		SocketAddress address = new InetSocketAddress(hostName, port);
@@ -73,18 +74,13 @@ public class SubmitController {
 			OutputStream outputData = socket.getOutputStream();
 			InputStream inputData = socket.getInputStream();
 			
-			// 코드 용량 송신
 			byte[] bytesSolidity = solidity.getBytes();
 			String count = Integer.toString(bytesSolidity.length);
 			byte[] bytesCount = count.getBytes();
 			// System.out.println("Controller solidiyCount : " + count);
 			outputData.write(bytesCount);
 			
-    		// 코드 용량 송신 확인
 			inputData.read(confirm);
-			
-			// 코드 송신
-			// System.out.println("Controller solidity: " + solidity);
 			
             int max = 65000;
             int loopSize = bytesSolidity.length;
@@ -104,7 +100,6 @@ public class SubmitController {
     		// System.out.println("loopCount : " + loopCount);
     		// System.out.println("remain : " + remain);
     		
-			// 결과 용량 수신
     		byte[] receiveBuffer = new byte[1024];
     		inputData.read(receiveBuffer);
     		String strSize = new String(receiveBuffer);
@@ -113,10 +108,8 @@ public class SubmitController {
     		size = Integer.parseInt(strSize);
     		// System.out.println("Controller resultCount : " + size);
     		
-    		// 결과 용량 수신 확인
     		outputData.write(confirm);
     		
-			// 결과 수신
     		byte[] bytesResult = new byte[size];
     		inputData.read(bytesResult);
     		result = new String(bytesResult);
@@ -130,7 +123,7 @@ public class SubmitController {
 		
 		result = result.trim();
 		if ("error".equals(result)) {
-			System.out.println("에러입니다.");
+			System.out.println("Generate Error.");
 			new Exception();
 		}
 		

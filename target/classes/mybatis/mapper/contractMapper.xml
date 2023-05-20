@@ -19,6 +19,6 @@
     </select>
     
     <insert id="insertContract" parameterType="hashMap"> 
-        INSERT INTO contracts VALUES (null, #{code}, #{ip}, null) 
+        INSERT INTO contracts VALUES (null, #{code}, #{ip}, now()) 
     </insert>
 </mapper>

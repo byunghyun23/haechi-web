@@ -6,6 +6,9 @@ Please do <a href='https://github.com/byunghyun23/haechi-server/'>this</a> first
 
 ![image](https://github.com/byunghyun23/haechi-web/blob/master/haechi_web_home.PNG)   
 
+## Try
+* You can experience it <a href='http://13.209.7.107:8080'>here</a>!
+
 ## Requirements
 * Database
 ```
