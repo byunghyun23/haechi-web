@@ -38,8 +38,8 @@ function wrapWindowByMask(){
 	$('#mask').css({'width':maskWidth,'height':maskHeight});  
 	
 	//애니메이션 효과 - 일단 1초동안 까맣게 됐다가 80% 불투명도로 간다.
-	//$('#mask').fadeIn(1000);      
-	$('#mask').fadeTo("slow",0.6);    
+//	$('#mask').fadeIn(1000);      
+	$('#mask').fadeTo("slow", 0.8);
 }
 
 ////////////////
@@ -157,10 +157,11 @@ function onSubmit(contractCount, issuesCount) {
     	url: "http://localhost:8080/submit",
 		type: "POST",
 		data: JSON.stringify(formData),
-		async: false,
+//		async: false,
 		dataType: "json",
 		contentType: "application/json; charset=utf-8",
 	        success : function(data){
+	        	
 	            // alert(JSON.stringify(data));
 //	            console.log(JSON.stringify(data));
 	         	var Range = ace.require('ace/range').Range;
@@ -511,6 +512,7 @@ function onSubmit(contractCount, issuesCount) {
 		   				dataType: "json",
 		   				contentType: "application/json; charset=utf-8",
 		   			        success : function(issueCount_data){
+		   			        	
 //		   			        	console.log("issueCount success");
 //		   			        	console.log(data);
 		   			        	$('#num_of_scan').text(issueCount_data.contractCount);
@@ -522,6 +524,7 @@ function onSubmit(contractCount, issuesCount) {
 		   			     	}
 		   			});
 		   			
+		   			
 	         	}
 	   	        
 	        },
@@ -529,6 +532,7 @@ function onSubmit(contractCount, issuesCount) {
 	     		alert("issueLine request : " + JSON.stringify(request) + " status : " + status + " error : " + error);
 	     	}
 	});
+	
 	
 }
 
