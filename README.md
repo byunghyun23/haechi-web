@@ -31,8 +31,3 @@ MariaDB or MySQL
 2. Solidity Code
 3. Analysis Results of Solidity Code
 ```
-
-## Run
-* java -jar haechi_web.jar
-
-![image](https://github.com/byunghyun23/haechi-web/blob/master/haechi_web_results.PNG)
